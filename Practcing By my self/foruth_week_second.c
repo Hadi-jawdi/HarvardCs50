@@ -37,5 +37,5 @@ int main(void)
     }
     //  the process of copying or assiging a variable finished. 
     // Don't forget to free the space as well 
-    // free(allocated_m);
+    free(allocated_m);
 }
