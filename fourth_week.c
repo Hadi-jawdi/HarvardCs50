@@ -2,7 +2,6 @@
 #include <string.h>
 #include "cs50.h"
 
-
 int main(void)
 { 
     
@@ -16,6 +15,7 @@ int main(void)
 
     printf("%p\n",&user_name[0]);
     printf("%p\n",&user_name[1]);
+    
 }
 
 
