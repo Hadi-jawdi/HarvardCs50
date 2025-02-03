@@ -1,22 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 #include "cs50.h"
-
 int main(void)
 {
-    FILE *users = fopen("Users.csv", "a");
-    int counter;
-    printf("Counter :");
-    scanf("%i",&counter);
-
-    while (counter < 10)
-    {
-        char *user_name = get_string("UserName: ");
-        char *user_password = get_string("Password: ");
-        fprintf(users, "UserName is :%s \n   , UserPassword is  %s \n",user_name, user_password);
-        counter++;
-    }
-    fclose(users);
-
+    FILE *books = fopen("books.txt","w");
+    string text = get_string("Enter your text to be saved in the file");
+    int len = strlen(text);
+    int counter  = 0;
+    while (counter < len)
+        {
+            fputc(text[counter],books);
+            counter++;
+        }
 
 }
